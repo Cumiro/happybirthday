@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Balloons-PNG/Balloons_PNG_Image-771009156.png?m=1541639344" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday Card</title>
+</head>
+<body>
+    <div id="fireworks-container"></div>
+<div class="card" id="birthdayCard">
+    <div class="card-content card-front">
+        <h1 class="custom-color1">З днем народження!</h1>
+        <h2 class="custom-color2">Сашуля:)</h2>
+        <img id="balloon" src="images/balloons.png" alt="Animated Balloons">
+        <div class="button-container">
+            <button onclick="playAudio()">🎵</button>
+            <button onclick="rotateCard()">Тик</button>
+        </div>
+        <audio id="melody" src="music/song.mp3"></audio>
+    </div>
+    <div class="card-content card-back">
+        <h1 class="custom-color1">U are the best<3</h1>
+        <h2 class="description-text">Дякую за те, що 17 рочків тому зв'явилась така неймовірна дівчинка😼
+            Бажаю тобі, щоб цей день був тільки на позитивчику, кіт <s>кусав</s> обіймав, а батьки та друзі раділи та посміхались тобі.
+        Та й ти не думай сумувати)
+    </h2>
+        <button onclick="rotateCard()">Тик</button>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
+@font-face {
+  font-family: 'Oswald-Medium';
+  src: url('Oswald-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Oswald-Medium", sans-serif;
+  background-color: rgb(255, 169, 183);
+  background-image: url('images/gift.png');
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  transition: background-color 1s ease;
+  animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0 0, 25px 25px;
+  }
+  100% {
+      background-position: 500px 500px, 525px 525px;
+  }
+}
+.flower-background {
+  background-image: url('images/flower.png');
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+}
+body.change-background-orange {
+  transition: background-color 1s ease;
+  background-color: orange; /* Новий колір фону */
+}
+body.change-background-pink {
+  transition: background-color 1s ease;
+  background-color: rgb(255, 169, 183);/* Новий колір фону */
+}
+.custom-color1 {
+  color: rgb(255, 100, 0);
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgba(255, 136, 0, 0.4);
+}
+.custom-color2 {
+  color: rgb(255, 136, 0);
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgba(255, 136, 0, 0.4);
+}
+
+.description-text {
+  color: rgb(255, 136, 0);
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  padding: 25px;
+  font-family: "Inter", sans-serif;
+}
+.card {
+  padding: 20px;
+  background-color: gold;
+  border-radius: 20px;
+  padding: 8px;
+  text-align: center;
+  width: 400px;
+  height: 480px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+.card.rotate {
+  transform: rotateY(180deg);
+}
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Вирівнювання тексту вище */
+  padding-top: 5px; /* Відступ від верху */
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+img {
+    width: 200px;
+    margin: 20px 0;
+}
+/* Додаємо цей стиль для контейнера кнопок */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 45px; /* Відстань між кнопками */
+}
+
+/* Змінюємо існуючий стиль кнопок, якщо потрібно */
+button {
+  width: 120px; /* Змінює ширину кнопки */
+  background-color: #4CAF50; /* Змінює колір кнопки */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: black; /* Колір тексту */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додає тінь */
+  transition: background-color 0.3s ease; /* Додає плавний перехід кольору */
+}
+/* Стиль для кнопок при наведенні */
+button:hover {
+  background-color: #45a049; /* Змінює колір кнопки при наведенні */
+}
+button:active {
+  background-color: #4CAF50; /* Колір при натисканні */
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+#balloon {
+  width: 275px; /* Задайте бажану ширину */
+  height: auto; /* Автоматично підлаштовує висоту, зберігаючи пропорції */
+}
+.animated-balloon {
+  animation: float 2s infinite;
+}
+
+#fireworks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Щоб контейнер не заважав взаємодії з іншими елементами */
+}
